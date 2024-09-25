@@ -79,6 +79,10 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 		return &configv1.CloudLoadBalancerIPsApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("ClusterCondition"):
 		return &configv1.ClusterConditionApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("ClusterMonitoring"):
+		return &configv1.ClusterMonitoringApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("ClusterMonitoringSpec"):
+		return &configv1.ClusterMonitoringSpecApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("ClusterNetworkEntry"):
 		return &configv1.ClusterNetworkEntryApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("ClusterOperator"):
@@ -377,6 +381,8 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 		return &configv1.UpdateApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("UpdateHistory"):
 		return &configv1.UpdateHistoryApplyConfiguration{}
+	case v1.SchemeGroupVersion.WithKind("UserDefinedMonitoring"):
+		return &configv1.UserDefinedMonitoringApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("UsernameClaimMapping"):
 		return &configv1.UsernameClaimMappingApplyConfiguration{}
 	case v1.SchemeGroupVersion.WithKind("UsernamePrefix"):
